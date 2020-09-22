@@ -1,7 +1,5 @@
 mod big_integer;
 
-extern crate num_bigint;
-
 use std::io;
 use big_integer::BigInt;
 use std::str::FromStr;

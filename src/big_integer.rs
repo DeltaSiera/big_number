@@ -97,7 +97,6 @@ impl BigInt {
 
 impl Display for BigInt {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
-        // let result = BigUint::new(self.number.clone());
         for x in self.convert_to_decimal().iter().rev() {
             write!(f, "{}", x)?;
         }
