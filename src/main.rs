@@ -1,12 +1,18 @@
 mod big_integer;
 
+extern crate num_bigint;
+
 use std::io;
 use big_integer::BigInt;
+use std::str::FromStr;
 
 fn main() {
-    let number = "3213456459846213216541321654964321654684321321321321321654";
-    let x = BigInt::new(number);
-
+    let number = "37514637146751465174321763417654176546546546512316584";
+    let mut x = BigInt::new(number);
+    let y = BigInt::new("675146751465716741675149768814977675146577164741");
+    x = &x >> 3741;
+    x = &x * &y;
+    println!("{}", x);
 }
 
 pub fn get_input() -> String {
